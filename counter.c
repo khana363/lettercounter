@@ -10,6 +10,7 @@
 #include <ctype.h>
 
 #define COUNT_SIZE 26
+
 #define BUFFER_SIZE 1024
 
 int max(int count[]);
@@ -44,6 +45,7 @@ int main()
     if (curchar >= 65 && curchar <= 90) count[curchar - 65]++;
     if (curchar == ' ') spaces++;
     else other++;
+  }
 
   // Create the letter analysis table
   printf("\n\nLetter Analysis Complete!");
@@ -58,6 +60,7 @@ int main()
   printf("%-10s%-15d%-15.2f\n","Other",
                               other,
                               (((float) count[i]) / strlen(buffer)) * 100);
+
 
 
 
@@ -80,7 +83,7 @@ int main()
 
   return 0;
 }
-}
+
 
 // Returns the position in array count of the associated letter that 
 // occurred the maximum number of times
