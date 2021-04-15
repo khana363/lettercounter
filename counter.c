@@ -9,10 +9,6 @@
 #include <string.h>
 #include <ctype.h>
 
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
 #define COUNT_SIZE 26
 #define BUFFER_SIZE 1024
 
@@ -20,15 +16,12 @@ int max(int count[]);
 int min(int count[]);
 
 
-=======
-
 int main()
 {
   char buffer[BUFFER_SIZE], input, curchar;
   int i = 0, count[26];
   int spaces = 0;
   int other = 0;
->>>>>>> feature
 
   // request and read in the string from the user
   printf("Enter text for analysis: ");
@@ -61,7 +54,6 @@ int main()
                                count[i],
                                (((float) count[i]) / strlen(buffer)) * 100);
   }
-<<<<<<< HEAD
   // Output the number of other characters
   printf("%-10s%-15d%-15.2f\n","Other",
                               other,
@@ -86,10 +78,8 @@ int main()
          min_pos + 65);
 
 
-
-=======
-
   return 0;
+}
 }
 
 // Returns the position in array count of the associated letter that 
@@ -123,4 +113,3 @@ int min(int count[])
   }  
   return min_pos;
 }
->>>>>>> feature
